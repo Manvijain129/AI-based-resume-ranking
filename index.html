@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume Matcher</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">ResuMatch</div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>AI-Based Resume Ranking</h1>
+      <p>Upload your resume and see how well it matches a job description!</p>
+      <button class="cta-primary">Get Started</button>
+    </div>
+  </section>
+
+  <section class="form-section">
+    <form class="match-form">
+      <label for="job-desc">Paste Job Description</label>
+      <textarea id="job-desc" placeholder="Enter job description..."></textarea>
+
+      <label>Upload Resume</label>
+      <div class="drop-zone" id="drop-zone">
+        <p>Drag and drop your resume here or click to select</p>
+      </div>
+      <input type="file" id="resume" accept=".pdf,.doc,.docx" hidden />
+    </form>
+  </section>
+
+  <section class="how-it-works">
+    <h2>How it works</h2>
+    <ol>
+      <li>Paste the job description.</li>
+      <li>Upload your resume.</li>
+      <li>Our AI compares them and ranks the match.</li>
+    </ol>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 ResuMatch. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

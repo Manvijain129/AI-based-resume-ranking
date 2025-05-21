@@ -1,0 +1,179 @@
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  background-color: #0b1b2a;
+}
+
+h1, h2, p {
+  margin: 0 0 1rem 0;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:focus {
+  outline: 2px solid #ff7b00;
+  outline-offset: 2px;
+}
+
+.hero {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  padding: 2rem;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.cta-primary {
+  background-color: #ff7b00;
+  color: #ffffff;
+  margin-top: 1rem;
+}
+
+.cta-primary:hover {
+  background-color: #e46c00;
+}
+
+.hero-content {
+  max-width: 700px;
+  margin: 2rem auto;
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.form-section {
+  padding: 2rem;
+  text-align: center;
+  background-color: #102840;
+}
+
+.match-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  resize: vertical;
+  height: 150px;
+}
+
+.drop-zone {
+  background-color: #1c3550;
+  border: 2px dashed #ff7b00;
+  border-radius: 10px;
+  padding: 2rem;
+  color: #cccccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.drop-zone:hover {
+  background-color: #223b59;
+}
+
+.drop-zone.highlight {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.how-it-works {
+  text-align: center;
+  padding: 2rem;
+  background-color: #12263a;
+}
+
+.how-it-works ol {
+  text-align: left;
+  max-width: 400px;
+  margin: 1rem auto;
+  padding-left: 1.2rem;
+}
+
+.footer {
+  padding: 2rem;
+  background-color: #000814;
+  text-align: center;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+  color: #ff7b00;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .hero-content {
+    padding: 1rem;
+  }
+
+  .match-form {
+    width: 90%;
+  }
+
+  .form-section, .how-it-works {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@keyframes dropSuccess {
+  0% {
+    transform: scale(1);
+    background-color: #1c3550;
+    box-shadow: none;
+  }
+  50% {
+    transform: scale(1.05);
+    background-color: #28a745;
+    box-shadow: 0 0 20px #28a745aa;
+  }
+  100% {
+    transform: scale(1);
+    background-color: #1c3550;
+    box-shadow: none;
+  }
+}
+
+.drop-zone.drop-animate {
+  animation: dropSuccess 0.8s ease-in-out;
+}
